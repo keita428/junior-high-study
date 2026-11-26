@@ -51,3 +51,7 @@ progress { width: 100%; accent-color: var(--accent); }
 @media (max-width: 350px) { nav { grid-template-columns: repeat(3,minmax(0,1fr)); } }
 select { min-width: 0; max-width: 100%; }
 .option { min-width: 0; overflow-wrap: anywhere; }
+.back { display: inline-block; padding: .65rem .15rem; color: var(--accent); font-weight: 700; }
+.subjects { display: grid; grid-template-columns: 1fr; gap: .75rem; }
+.subjects a { display: grid; padding: 1rem 1.25rem; border: 1px solid var(--line); border-radius: .85rem; background: #fff; color: var(--ink); text-decoration: none; }
+.subjects a strong { font-size: 1.5rem; color: var(--accent); }

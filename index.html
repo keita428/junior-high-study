@@ -3,29 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<title>中学音楽ワーク</title>
+<title>中学テスト対策ワーク</title>
 <link rel="stylesheet" href="./style.css">
-<script defer src="./questions.js"></script>
-<script defer src="./app.js"></script>
 </head>
 <body>
 <main>
-<header><p class="label">中学音楽</p><h1>音楽ワーク</h1><p>交響曲第5番・越天楽・羽衣を練習しよう。</p></header>
-<nav aria-label="学習モード">
-<button type="button" data-mode="summary" aria-pressed="true">まとめ</button>
-<button type="button" data-mode="cards" aria-pressed="false">赤シート</button>
-<button type="button" data-mode="short" aria-pressed="false">一問一答</button>
-<button type="button" data-mode="fill" aria-pressed="false">穴埋め</button>
-<button type="button" data-mode="instrument" aria-pressed="false">楽器</button>
-<button type="button" data-mode="choice" aria-pressed="false">４択模試</button>
-<button type="button" data-mode="review" aria-pressed="false">誤答復習</button>
+<header><h1>中学テスト対策ワーク</h1><p>勉強する教科を選んでください。</p></header>
+<nav class="subjects" aria-label="教科">
+<a href="./music.html"><strong>音楽</strong><span>交響曲第5番・越天楽・唱歌・羽衣</span></a>
+<a href="./social.html"><strong>社会</strong><span>中国・四国地方・北海道地方・近代の歴史</span></a>
 </nav>
-<div class="filter"><label for="unit">学習範囲</label><select id="unit"><option value="all">すべての範囲</option></select></div>
-<section id="panel" aria-label="学習ワーク"></section>
-<p class="note">誤答の記録は、このブラウザーに保存します。</p>
-<p id="storage-note" class="note" hidden>この環境では、誤答の記録はページを開いている間だけ保持されます。</p>
-<button type="button" id="reset">学習記録をリセット</button>
 </main>
 </body>
 </html>

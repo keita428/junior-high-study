@@ -3,7 +3,8 @@ const panel = document.querySelector("#panel");
 const unitSelect = document.querySelector("#unit");
 const tabs = [...document.querySelectorAll("[data-mode]")];
 const storageNote = document.querySelector("#storage-note");
-const storageKey = "junior-high-music-v1";
+const isSocial = typeof socialSource !== "undefined";
+const storageKey = isSocial ? "junior-high-social-v1" : "junior-high-music-v1";
 const validIds = new Set(questions.map(question => question.id));
 
 let history = {missed: [], answered: 0, correct: 0};
@@ -98,7 +99,7 @@ function render(focus = false) {
       node("p", pages).className = "meta";
       node("p", summaries[index]);
     });
-    node("p", "写真で確認した教科書は40・41ページです。雅楽と能は鑑賞プリントを中心に出題し、51ページの唱歌は補足問題を収録しています。").className = "note";
+    node("p", isSocial ? socialSource : "写真で確認した教科書は40・41ページです。雅楽と能は鑑賞プリントを中心に出題し、51ページの唱歌は補足問題を収録しています。").className = "note";
     return;
   }
 
